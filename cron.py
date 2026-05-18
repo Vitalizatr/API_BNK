@@ -7,7 +7,7 @@ load_dotenv()
 
 """Обычное измененние"""
 
-url = os.environ["URL"]
+url = os.environ["SOME_SECRET"]
 
 def cron():
     P = Parser(url)

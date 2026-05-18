@@ -3,7 +3,9 @@ name: run main.py
 on:
   schedule:
     - cron: '0 5 * * 0' # At 00:00 on Monday
-
+  push:
+  pull_request:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
