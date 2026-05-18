@@ -1,6 +1,6 @@
-import services
+import endpoints.services as services
 from fastapi import FastAPI
-from basemodels import SCount
+from endpoints.basemodels import SCount
 
 app = FastAPI(
     title="BNP API",
