@@ -14,10 +14,10 @@ class Parser():
 
             df = pd.read_csv(StringIO(r.text),sep=";")
             df.columns = ["date", "depo", "base_rate", "repo_rate", "loan"]
-            
+            df = df.where(pd.notnull(df), None)
             # Удалил служебные даные таблицы
             df = df.iloc[:-3]
-
+            
             df["date"] = pd.to_datetime(df["date"],format="%d.%m.%Y")
 
             
