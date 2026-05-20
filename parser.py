@@ -31,8 +31,7 @@ class Parser():
     def convert_to_json_all(df):
         try:
             df["date"] = df["date"].dt.strftime("%d.%m.%Y")
-            array = df.to_dict(orient="records")
-            array_json = json.dumps(array)
+            array_json = df.to_dict(orient="records")
             
             return array_json
         except Exception as e:
