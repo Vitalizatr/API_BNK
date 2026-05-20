@@ -235,7 +235,7 @@
     "date": "26.09.2007",
     "depo": "2,00",
     "base_rate": "16,00",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "18,00",
     "half": "2007: H2"
   },
@@ -243,7 +243,7 @@
     "date": "20.04.2007",
     "depo": "2,00",
     "base_rate": "13,50",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "17,00",
     "half": "2007: H1"
   },
@@ -251,7 +251,7 @@
     "date": "08.12.2006",
     "depo": "2,00",
     "base_rate": "14,50",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "18,00",
     "half": "2006: H2"
   },
@@ -259,7 +259,7 @@
     "date": "30.06.2006",
     "depo": "2,00",
     "base_rate": "12,50",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "17,00",
     "half": "2006: H1"
   },
@@ -267,7 +267,7 @@
     "date": "02.09.2005",
     "depo": "2,00",
     "base_rate": "12,50",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "15,00",
     "half": "2005: H2"
   },
@@ -275,7 +275,7 @@
     "date": "18.02.2005",
     "depo": "2,00",
     "base_rate": "13,00",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "15,00",
     "half": "2005: H1"
   },
@@ -283,7 +283,7 @@
     "date": "01.10.2004",
     "depo": "5,00",
     "base_rate": "14,50",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "17,00",
     "half": "2004: H2"
   },
@@ -291,7 +291,7 @@
     "date": "29.06.2004",
     "depo": "5,00",
     "base_rate": "14,00",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "17,00",
     "half": "2004: H1"
   },
@@ -299,7 +299,7 @@
     "date": "12.12.2003",
     "depo": "3,00",
     "base_rate": "14,00",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "17,00",
     "half": "2003: H2"
   },
@@ -307,7 +307,7 @@
     "date": "28.03.2003",
     "depo": "3,00",
     "base_rate": "10,50",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "16,50",
     "half": "2003: H1"
   },
@@ -315,7 +315,7 @@
     "date": "31.10.2002",
     "depo": "3,00",
     "base_rate": "9,50",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "16,50",
     "half": "2002: H2"
   },
@@ -323,7 +323,7 @@
     "date": "02.05.2002",
     "depo": "3,00",
     "base_rate": "12,00",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "21,00",
     "half": "2002: H1"
   },
@@ -331,7 +331,7 @@
     "date": "29.11.2001",
     "depo": "3,00",
     "base_rate": "13,50",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "22,50",
     "half": "2001: H2"
   },
@@ -339,7 +339,7 @@
     "date": "29.03.2001",
     "depo": "3,00",
     "base_rate": "20,00",
-    "repo_rate": NaN,
+    "repo_rate": null,
     "loan": "29,00",
     "half": "2001: H1"
   }
