@@ -14,7 +14,7 @@ class Parser():
 
             df = pd.read_csv(StringIO(r.text),sep=";")
             df.columns = ["date", "depo", "base_rate", "repo_rate", "loan"]
-            df = df.where(pd.notnull(df), None)
+            
             # Удалил служебные даные таблицы
             df = df.iloc[:-3]
             
@@ -31,6 +31,7 @@ class Parser():
     def convert_to_json_all(df):
         try:
             df["date"] = df["date"].dt.strftime("%d.%m.%Y")
+            df = df.where(pd.notnull(df), None)
             array_json = df.to_dict(orient="records")
             
             return array_json
