@@ -24,6 +24,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: network test
+        run: |
+          curl -I https://google.com
+          curl -I https://bnm.md/ru/export-base-rates?limit=1000
 
       - name: install python packages
         run: |
