@@ -9,7 +9,13 @@ class Parser():
 
     def parse_data_from_url(self):
         try:
-            r = requests.get(self.url, impersonate="chrome", timeout=30)
+            proxies = {
+                "http": "socks5://127.0.0.1:9050",
+                "https": "socks5://127.0.0.1:9050"
+            }
+            
+            # Передаем proxies и имитируем Chrome. Теперь запрос на 100% выйдет через Молдову
+            r = requests.get(clean_url, impersonate="chrome", proxies=proxies, timeout=30)
             r.raise_for_status()
 
             df = pd.read_csv(StringIO(r.text),sep=";")
