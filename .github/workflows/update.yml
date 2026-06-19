@@ -27,7 +27,8 @@ jobs:
       - name: network test
         run: |
           curl -I https://google.com
-          curl -I https://bnm.md/ru/export-base-rates?limit=1000
+          curl -I https://bnm.md
+          curl -I https://bnm.md/ru/export-base-rates?limit=24
 
       - name: install python packages
         run: |
