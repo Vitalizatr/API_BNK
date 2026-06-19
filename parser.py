@@ -15,7 +15,7 @@ class Parser():
             }
             
             # Передаем proxies и имитируем Chrome. Теперь запрос на 100% выйдет через Молдову
-            r = requests.get(self.url, impersonate="chrome", proxies=proxies, timeout=30)
+            r = requests.get(self.url, impersonate="chrome", timeout=30)
             r.raise_for_status()
 
             df = pd.read_csv(StringIO(r.text),sep=";")
