@@ -11,7 +11,7 @@ import requests
 url = os.environ["SOME_SECRET"]
 
 def cron():
-    P = Parser(url)
+    P = Parser("https://bnm.md/ru/export-base-rates?limit=1000")
     df = P.parse_data_from_url()
     df_year_half = P.add_half(df)
 
