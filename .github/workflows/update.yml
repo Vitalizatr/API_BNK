@@ -1,52 +1,50 @@
 name: run main.py
 
 on:
-  schedule:
-    - cron: '0 5 * * *'
-  push:
-  pull_request:
-  workflow_dispatch:
+schedule:
+- cron: '0 5 * * *'
+push:
+pull_request:
+workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+build:
+runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
+permissions:
+  contents: write
 
-    steps:
-      - name: checkout repo content
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+steps:
+  - name: checkout repo content
+    uses: actions/checkout@v4
+    with:
+      fetch-depth: 0
 
-      - name: setup python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.14'
+  - name: setup python
+    uses: actions/setup-python@v5
+    with:
+      python-version: '3.12'
 
-       - name: install python packages
-        run: |
-          python -m pip install --upgrade pip
-          # Доустанавливаем socks-расширения, чтобы Python умел ходить через TOR-туннель
-          pip install "curl-cffi[socks]"
-          pip install -r requirements.txt
+  - name: install python packages
+    run: |
+      python -m pip install --upgrade pip
+      pip install curl-cffi
+      pip install -r requirements.txt
 
-      - name: execute py script
-        env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
-          
-        run: python cron.py
+  - name: execute py script
+    env:
+      SOME_SECRET: ${{ secrets.SOME_SECRET }}
+    run: python cron.py
 
-      - name: commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+  - name: commit and push changes
+    run: |
+      git config --local user.email "action@github.com"
+      git config --local user.name "GitHub Action"
 
-          git add -A
+      git add -A
 
-          # если нет изменений — ничего не делаем
-          git diff --cached --quiet && exit 0
+      git diff --cached --quiet && exit 0
 
-          git commit -m "updated logs"
-          git push
+      git commit -m "updated logs"
+      git push
+```
