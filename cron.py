@@ -2,8 +2,9 @@ import os
 import json
 from parser import Parser
 from dotenv import load_dotenv
+import requests
 
-load_dotenv()
+
 
 """Обычное измененние"""
 
@@ -21,3 +22,7 @@ def cron():
 
 if __name__ == "__main__":
     print(cron())
+    r = requests.get("https://bnm.md/ru/export-base-rates?limit=1000", timeout=30)
+    print(r.status_code)
+    print(r.text[:200])
+    load_dotenv()
