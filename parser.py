@@ -9,8 +9,14 @@ class Parser():
 
     def parse_data_from_url(self):
         try:
-            r = httpx.get(self.url)
-            r.raise_for_status()
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            }
+        
+
+            with httpx.Client(headers=headers, timeout=30.0) as client:
+                r = client.get(self.url)
+                r.raise_for_status()
 
             df = pd.read_csv(StringIO(r.text),sep=";")
             df.columns = ["date", "depo", "base_rate", "repo_rate", "loan"]
